@@ -1,0 +1,9 @@
+// OasesChat Release configuration
+OASES_API_BASE_URL = https:/$()/api.oases.dev/v1
+OASES_REVE_API_BASE_URL = https:/$()/oaseschat.com/api/reve/v1
+OASES_PROJECT_API_BASE_URL = https:/$()/oaseschat.com/api/project
+
+INFOPLIST_KEY_OASESVerboseLogging = NO
+
+// Optional native frameworks (FFmpeg, …) — auto-generated.
+#include "OptionalFrameworks.generated.xcconfig"

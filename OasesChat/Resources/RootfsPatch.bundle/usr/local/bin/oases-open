@@ -1,0 +1,50 @@
+#!/bin/sh
+# oases-open — URL / file opener for guest programs running under iSH.
+#
+# Stands in for xdg-open(1) and the sensible-browser family so Linux tools
+# that "just open a link" reach the host instead of failing with
+# "no method available".
+#
+# Two delivery paths, in this order:
+#
+#   1. Interactive terminal (stdout is a tty): emit the OSC 1337
+#      `OasesOpenURL` marker that `TerminalEmulator` parses. That routes
+#      through `OasesOpenURLBroker`, giving the in-app WKWebView preview /
+#      file viewer rather than kicking the user out to Safari.
+#   2. Otherwise (agent tool calls, scripts, pipes): hand off to the native
+#      `apple-open` offload, which calls UIApplication.open.
+#
+# OpenMinis' `minis-open` only ever does (1), so a non-terminal caller there
+# just prints an escape sequence nobody reads.
+#
+# Guest paths under /var/oases (and the /var/minis compat symlink) are mapped
+# to the oases:// scheme so the host resolves them to the real APFS location
+# and picks a viewer by extension.
+
+set -e
+
+if [ $# -eq 0 ]; then
+    echo "usage: oases-open <url|path>" >&2
+    exit 1
+fi
+
+target="$1"
+
+case "$target" in
+    /var/oases/*) target="oases://${target#/var/oases/}" ;;
+    /var/minis/*) target="oases://${target#/var/minis/}" ;;
+    /*)
+        # Any other absolute guest path: hand over as a file:// URL and let
+        # the host decide whether it can preview it.
+        target="file://$target"
+        ;;
+esac
+
+# The marker is only meaningful to a terminal that scans for it.
+if [ -t 1 ]; then
+    printf '\033]1337;OasesOpenURL=%s\007\n' "$target"
+    printf 'Opened in Oases Chat: %s\n' "$target"
+    exit 0
+fi
+
+exec apple-open "$target"

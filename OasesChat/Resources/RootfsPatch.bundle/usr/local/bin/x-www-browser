@@ -1,0 +1,3 @@
+#!/bin/sh
+# Alias for oases-open — see that script for the routing rules.
+exec /usr/local/bin/oases-open "$@"

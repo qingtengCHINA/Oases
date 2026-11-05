@@ -1,0 +1,4 @@
+#!/bin/sh
+# OpenMinis compatibility: built-in MinisSkills call `minis-open`.
+# Same routing as oases-open (in-app preview when possible).
+exec /usr/local/bin/oases-open "$@"

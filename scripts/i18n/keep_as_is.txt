@@ -1,0 +1,76 @@
+# Strings that stay identical in every language (one per line, exact match).
+# Brand and product names, protocol names and unit-only strings.
+Oases
+Oases Chat
+Oases Files
+Ogent
+Ogent Computer
+MCP
+API
+API Key
+OAuth
+URL
+Base URL
+JSON
+HTTP
+HTTPS
+iSH
+Alpine
+Linux
+GitHub
+iCloud
+Siri
+Face ID
+Touch ID
+Live Activity
+SSH
+PDF
+HTML
+Markdown
+# Bundle names (CFBundleName, never shown in the UI)
+OasesChat
+OasesChatWidget
+OasesChatFileProvider
+OasesChatShare
+# Technical identifiers, framework and service names, paths, URLs, code.
+%@ Computer
+/var/minis/mounts/%@
+Alibaba Bailian
+Xiaomi MiMo
+OpenMinis
+Bearer Token
+Bluetooth
+Chat Completions
+Images Generations
+Responses API
+Client ID
+User Agent
+GitHub URL
+JavaScript
+SKILL.md
+STDIO
+Shell
+Vision
+Full HD
+Oases Chat: %@
+Ogent Runtime
+Ogent Shell
+model-id
+npx
+root@ogent:~#
+qingtengstudio.com
+https://…
+https://api.example.com/v1
+http://127.0.0.1:11434/v1
+github.com/user/repo/blob/main/SKILL.md
+{"mcpServers":{"filesystem":{"command":"npx","args":["-y","@modelcontextprotocol/server-filesystem","/tmp"],"env":{"TOKEN":"..."}}}}
+# Vendor names shown in model/provider lists (Latin script in every language)
+Ant Group (Ling)
+Anthropic (Claude)
+Google (Gemini)
+Moonshot AI (Kimi)
+OAuth (Client ID + Secret)
+Xiaomi (MiMo)
+Zhipu AI (GLM)
+iFlytek (Xunfei)
+xAI (Grok)

@@ -1,0 +1,55 @@
+# Packages baked into the bundled Ogent rootfs (Resources/AlpineFakefs).
+# Alpine v3.21, aarch64. One package per line; `#` starts a comment.
+# Chosen from the tool needs of the built-in MinisSkills (see
+# docs/superpowers/plans/2026-09-28-ogent-preinstalled-toolchain-and-builtin-skills.md).
+# Changing this list: rebuild with build_alpine_fakefs.sh and bump
+# ROOTFS_VERSION there so existing installs migrate.
+
+# Alpine minirootfs base
+alpine-baselayout
+alpine-keys
+alpine-release
+apk-tools
+busybox
+libc-utils
+
+# Core CLI
+bash
+ca-certificates
+curl
+wget
+git
+jq
+openssl
+zip
+unzip
+file
+tzdata
+sqlite
+
+# Python
+python3
+py3-pip
+uv
+py3-requests
+py3-httpx
+py3-h2
+py3-socksio
+py3-aiohttp
+py3-websockets
+py3-certifi
+py3-pillow
+py3-pycryptodome
+py3-beautifulsoup4
+py3-lxml
+py3-yaml
+py3-brotli
+py3-mutagen
+py3-tabulate
+py3-typing-extensions
+py3-qrcode
+py3-dateutil
+
+# Media
+ffmpeg
+yt-dlp-core

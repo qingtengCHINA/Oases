@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "brainstorming",
+      "name": "brainstorming",
+      "description": "创意和功能开发前的结构化头脑风暴，先搞清楚真实意图再动手。",
+      "category": "productivity",
+      "author": "Jesse Vincent (obra)",
+      "skillURL": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["头脑风暴", "需求澄清"]
+    },
+    {
+      "id": "writing-plans",
+      "name": "writing-plans",
+      "description": "把规格和需求拆解成可执行、可检查的多步实现计划。",
+      "category": "productivity",
+      "author": "Jesse Vincent (obra)",
+      "skillURL": "https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["计划", "实现路线"]
+    },
+    {
+      "id": "executing-plans",
+      "name": "executing-plans",
+      "description": "按计划逐步执行，带审查检查点，适合交给独立会话跑长任务。",
+      "category": "productivity",
+      "author": "Jesse Vincent (obra)",
+      "skillURL": "https://github.com/obra/superpowers/blob/main/skills/executing-plans/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["执行", "检查点"]
+    },
+    {
+      "id": "verification-before-completion",
+      "name": "verification-before-completion",
+      "description": "声明“完成”之前强制运行真实验证命令，用证据代替拍脑袋。",
+      "category": "productivity",
+      "author": "Jesse Vincent (obra)",
+      "skillURL": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["验证", "防翻车"]
+    },
+    {
+      "id": "systematic-debugging",
+      "name": "systematic-debugging",
+      "description": "复现 → 最小化 → 假设 → 修复的严谨调试循环，拒绝瞎试。",
+      "category": "development",
+      "author": "Jesse Vincent (obra)",
+      "skillURL": "https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["调试", "Bug 排查"]
+    },
+    {
+      "id": "test-driven-development",
+      "name": "test-driven-development",
+      "description": "红-绿-重构的测试驱动开发流程，写实现代码之前先写测试。",
+      "category": "development",
+      "author": "Jesse Vincent (obra)",
+      "skillURL": "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["TDD", "测试"]
+    },
+    {
+      "id": "mcp-builder",
+      "name": "mcp-builder",
+      "description": "从零构建 Model Context Protocol 服务器，把工具和数据接进 AI。",
+      "category": "development",
+      "author": "Anthropic",
+      "skillURL": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["MCP", "工具集成"]
+    },
+    {
+      "id": "frontend-design",
+      "name": "frontend-design",
+      "description": "生产级前端界面与组件设计，避开千篇一律的 AI 风格。",
+      "category": "creation",
+      "author": "Anthropic",
+      "skillURL": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["前端", "UI 设计"]
+    },
+    {
+      "id": "pdf",
+      "name": "pdf",
+      "description": "创建和编辑 PDF 文档：报告、发票、表格、合并拆分都行。",
+      "category": "creation",
+      "author": "Anthropic",
+      "skillURL": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["PDF", "文档"]
+    },
+    {
+      "id": "pptx",
+      "name": "pptx",
+      "description": "创建和编辑 PPTX 演示文稿，含布局、图表和排版规范。",
+      "category": "creation",
+      "author": "Anthropic",
+      "skillURL": "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["PPT", "幻灯片"]
+    },
+    {
+      "id": "xlsx",
+      "name": "xlsx",
+      "description": "创建和编辑电子表格：公式、图表、数据清洗与报表。",
+      "category": "data",
+      "author": "Anthropic",
+      "skillURL": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["Excel", "表格"]
+    },
+    {
+      "id": "slack-gif-creator",
+      "name": "slack-gif-creator",
+      "description": "制作 Slack 自定义表情和 GIF，给团队聊天添点乐子。",
+      "category": "life",
+      "author": "Anthropic",
+      "skillURL": "https://github.com/anthropics/skills/blob/main/skills/slack-gif-creator/SKILL.md",
+      "version": "1.0.0",
+      "tags": ["GIF", "表情包"]
+    }
+  ]
+}

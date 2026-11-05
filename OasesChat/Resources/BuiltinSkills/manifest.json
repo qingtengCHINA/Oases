@@ -1,0 +1,723 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repo": "https://github.com/OpenMinis/MinisSkills",
+    "commit": "7ac4068b36bbc961a4d6f0a4a06456d90e2b6f55"
+  },
+  "bundleHash": "76b96da4b701e6d78d164cdd994ca6db34cec84685545e0f355ab38e17d7843e",
+  "skills": [
+    {
+      "id": "android-dev",
+      "name": "android-dev",
+      "version": "2.0.0",
+      "defaultEnabled": false,
+      "disabledReason": "仅适用于 Minis Android（需 Shizuku/Android SDK），iOS 上不可用",
+      "contentHash": "e2936a7ba2b257d4babdc79be5d45322d75cbd9aea47f5aa86ad3f4610355846",
+      "files": {
+        "SKILL.md": "02cc35554931ee20a3d1e430b7520c5dbd228fbc437b6f63e4f6d28b7ca6d4af",
+        "evals/evals.json": "aa93f66bf6db5e9f5e262492403c5f8c5b9ebc6623d27fb84e75d7f0e091357a",
+        "references/aapt2-provenance.md": "25e7c352e350ab8abce50e21add5d61987bc44afdd2fa415d5a9789cf0bc3426",
+        "scripts/bootstrap-android.sh": "db7b5dca443a713b7930dd787197f26168044bf884e55a0697d840c33fa08ae6",
+        "scripts/doctor.sh": "83306b057d46dc47b7328358ae4b8c69fc3ecb50a267852bdb7cafbe2af1534e",
+        "scripts/smoke-bootstrap.sh": "07127a9caebe9ffb186586040d590874c6db7a85fe05cf302531ff024b3327af",
+        "scripts/verify-apk.sh": "df452e6ffb280c66948ecf29dc0e0e7a488197aab68101832b4c5d12824bf45e"
+      }
+    },
+    {
+      "id": "android-ui-automation",
+      "name": "android-ui-automation",
+      "version": "1.0.0",
+      "defaultEnabled": false,
+      "disabledReason": "仅适用于 Minis Android（需 Android 无障碍服务），iOS 上不可用",
+      "contentHash": "68d5f65cea0fd8bc85b14e760525cec691c96cc44558db938fce42dc731d77a5",
+      "files": {
+        "SKILL.md": "8db4aa65ab9fb38c4b3d9631170c07d492061ef40ebfd6fb81e52cf4fdafd9f5",
+        "evals/evals.json": "5e2b3e8c5b57700853f74a9ef93ee9ca2c0d3cb45541fa87bf9e6910456c10cf",
+        "references/app-deep-links.md": "1b92ea827377aaaa0b8032e2db44cbf47317657e185f4a48d089e42d4cba1c04",
+        "scripts/find_node.py": "c9c7ced56976d5d96cf81741388b572d8761fbe4e89eac307e9aaad8bfd0edce",
+        "scripts/open_deep_link.py": "15a67e7772bf691d2f3c10667984dfd789a78232e8aef668e0b00f0317abd330",
+        "scripts/tap_and_verify.py": "9dc4b739c54510808576a958600364f37f793873f19d75c701656c317eb935fd",
+        "tests/unit_tests.py": "8b2f58bb5f92856b173747c52a7c6eb41d8cc1c80bd73aabe08f420debd66846"
+      }
+    },
+    {
+      "id": "apple-reminders",
+      "name": "apple-reminders",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "6dccf46d4154d73b2ed81e62dc6d762ce20a604e91335412b1e15b78147d31bc",
+      "files": {
+        "SKILL.md": "6331557e24e3c1be73a053b285f52f856c27f6d403a79fae2edb0c8f5bc51f5a",
+        "evals/evals.json": "de2d681b97caa94a000c23b33b2a6f33a67817f07a7dbe5c9c5b737b8870c123",
+        "references/cli.md": "6ed1b59ce482b827e7c4167bd541a406adb2048678b3760ec79c5e600be6e247"
+      }
+    },
+    {
+      "id": "appstoreprice-hub",
+      "name": "appstoreprice-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "cf04e146ff95f6882f7aec6f4a2e059fd58fa63779fbcd6c224966aebeea8bf8",
+      "files": {
+        "SKILL.md": "25ed7b5dc539bfa146b9de31d6c426e6b78fde8f9e88d426fe51149af1d8759a",
+        "scripts/api.js": "6cab400479658bf4ab11a0999a88554ed7625029af24ad24dc359de3514a10cb"
+      }
+    },
+    {
+      "id": "asc-cli",
+      "name": "asc-cli",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "551540635f738f3ab858552173bec253c57eaa051ace7d4851a7052b3bef7122",
+      "files": {
+        "SKILL.md": "7d5010a0dca36332406c5c3b4b3ea0c67c85ebda7c3bd8f9f673dde0b21d25ee"
+      }
+    },
+    {
+      "id": "bilibili-hub",
+      "name": "bilibili-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "f815fb8c8f19528ae457c7a5df962d4d7e4c6bc6fec8e063099ed124fdcee222",
+      "files": {
+        "SKILL.md": "ff17d31dbfbaf4e2d11e6b1e11544da216fd11dd98c20ae1d53e5e35a3c736ab",
+        "pyproject.toml": "ba9bf5301aea3417ce01e74bbf7ba581dbcdc94a3e41ed04a31cf1311e7d6ab3",
+        "scripts/__init__.py": "6d2cd778e253731184bf7e3032988afdee8a69fc8354f86f701c6633c2fc275e",
+        "scripts/client.py": "b2f1f530ee1e29542fc0b5ce22588fc8c0087d1d033a36e9b8d83d61d04de570",
+        "scripts/exceptions.py": "7048c2d482ab73d69d6f8c29fcef602e26948b2d7f7c6724c864efe9e04ba74b",
+        "scripts/payloads.py": "9bd61bb0420fcecbcdccecb8c91015ea4a7f7d672e13662c0511f618b14ddf1d"
+      }
+    },
+    {
+      "id": "cloudflare-dns",
+      "name": "cloudflare-dns",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "6e063e87ecd04a5766889b5887ab76ab93f4659298d2669202b705d961c85f69",
+      "files": {
+        "SKILL.md": "5ef1261bfab4853faa2008b2f63dae0127b7f30f9292c70044bf25d4e00b1ca5"
+      }
+    },
+    {
+      "id": "contact-vcard-extractor",
+      "name": "contact-vcard-extractor",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "b2d0481cb28a5972403fed531eb4e868a2c3238da52ee456b954705c64f16751",
+      "files": {
+        "SKILL.md": "65ba870726080ebb429104f70dec816bea7cc6bd3fcfe2413bbf1dfe8032f4f6",
+        "scripts/contact_to_vcard.py": "8e59638eca6e8d13297e66f95760f5e0f530ace8b57714dab62d6c90ee23eb89"
+      }
+    },
+    {
+      "id": "deepseek-usage",
+      "name": "deepseek-usage",
+      "version": "1.1.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "2cb864ae1c87436335d2fcda12e02122309f909bde32d8f39ff79a9e88f704eb",
+      "files": {
+        "SKILL.md": "b15ccb8624e3d70c12e85797b1f6c3971c18bbab4363bceef50231c3854e78e1"
+      }
+    },
+    {
+      "id": "doubao-tts",
+      "name": "doubao-tts",
+      "version": "2.1.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "4935d8bdd41e7e100a68de6e6c9ad2a0f7085a0796d388cb8ae513395fc8c0bd",
+      "files": {
+        "SKILL.md": "7f688ab653ca8e34885b8284bbdea5d534a9bf6f0a442ca7b02634d730d28713",
+        "scripts/tts.py": "1eb6465c55d968fb21b1a19f5093d99bb7670f9218bad77b95f6774cfcfe823d"
+      }
+    },
+    {
+      "id": "douyin-downloader",
+      "name": "douyin-downloader",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "3fec8483c8c435744f4c8cff9c6e2671620bcb96d9caa6cd34c23bb8d41b731e",
+      "files": {
+        "SKILL.md": "081e1c87cb625d45cc1943ed23b8d17ea6d7b77c7c9e3ec65c2d4c8727cf4326",
+        "scripts/download_video.py": "7edd56ac643baa3bc4c8d710c7f061f32cdc0f0b45797fc301efaa0d140a7bc2",
+        "scripts/parse_douyin.py": "81252dd83045df16cd4e425bededff45a57c11b8186f33e396cc14f33380b1b5",
+        "scripts/transcribe_audio.py": "07daadef47b7d20378c9919c750e6fd3964f666cc03d6eb511cbe5ebb6b9d50b"
+      }
+    },
+    {
+      "id": "exa-search",
+      "name": "exa-search",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "9c5e59643c26a093ff5f9e400ab34f22806a534385cc87994c0f54d866073685",
+      "files": {
+        "SKILL.md": "b088abbf2d7d5ef554790f30723aac434fda749fb16afea59d8701971a244b28",
+        "scripts/query.py": "0930f9c94d6a2ee4f9285521173502f7195621846ddfc3bb999e41da76c1bb16"
+      }
+    },
+    {
+      "id": "free-tts",
+      "name": "free-tts",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "0f75e97b4b38d2b31eedb39ec69b8955d792b961aacdc2c969f829e39ed882f2",
+      "files": {
+        "SKILL.md": "30f691f096deca5acd18917fc32a02a1ef04674aa1aa0be1638635a3424364bb"
+      }
+    },
+    {
+      "id": "fucai3d-latest",
+      "name": "fucai3d-latest",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "97ee60af15f0daff3c112ace5ddc5a5f811b7e512bc630a664644e948bde2535",
+      "files": {
+        "README.md": "6167690d2c836cb5cef895abed0a5cfa39f320ae3445f3ac41e7d8a582eee547",
+        "SKILL.md": "e89e90e48454c3fbf525933028b72089601928b98bcfeb0b4e414ea648ff6df1",
+        "recommender.py": "0abc2043c8b57264bad460b6faa399836f3cfe56ea547aaabb1918235f1afdbf"
+      }
+    },
+    {
+      "id": "generative-ui-minis",
+      "name": "generative-ui-minis",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "adc64be808ec859fce761862509d7a00d8e7de5fcf9ef4c72f1ce94f5b9bed79",
+      "files": {
+        "SKILL.md": "2c8eefc728f12e2a701a7a92f702103854776f46e86fef8e62b132624416a60a",
+        "scripts/generative_ui_artifact.py": "1c5d6c9325a890dfcc992a2845f7f80b71e39fd2df1488634fe6513f983dfc1a",
+        "scripts/generative_ui_demo.py": "50f085dbc271d74e0ca1cea1db62eb18c4b761d0188ed6092ebf429dd8d669d0"
+      }
+    },
+    {
+      "id": "github-sync-helper",
+      "name": "github-sync-helper",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "81ba50da2c0b8d61e63ffe061b817c508b1da3f41492d361d96d8baf8c83517f",
+      "files": {
+        "SKILL.md": "775794c9d403b95d4e15817e68dcac0fba1fcb886c7d54f34b13755b32257def",
+        "scripts/gh_sync.sh": "fa15530fbfc3b3ed28c4812dd3112b735f7cd78c06f6997f4dd0ab17f57882e9"
+      }
+    },
+    {
+      "id": "hyperframes",
+      "name": "hyperframes",
+      "version": "1.0.0",
+      "defaultEnabled": false,
+      "disabledReason": "需要 Chrome 与 Node ≥ 22，iSH 环境无法运行",
+      "contentHash": "9d971f5aac0961e6335cb64b3465fe31877dbfefd35a191da34890b5f16723b8",
+      "files": {
+        "SKILL.md": "5cf743a7c6ff17b638d101b529c946a3ea9fc71648c6bfd18208c84f79ce242f",
+        "data-in-motion.md": "22084b4460a8f815d923b972a908f937c1e573bbbc7a865f6f2979ec2ae7ff15",
+        "house-style.md": "e0719895b369d7ee5203850250e605b3a1c15dbe43a367dd54e396f2b439f838",
+        "palettes/bold-energetic.md": "17bc6b7889302151b4e5c84c0c6a33df676647078011d9decb2b68810e3baa7f",
+        "palettes/clean-corporate.md": "d0c8c86838abb77985609629afe600d0ca365eccd835820f309959e8a85cba9d",
+        "palettes/dark-premium.md": "abfecbf7e8dca3b674376590a0467aac3e13b2135022ae4ec519c4b27c2303b1",
+        "palettes/jewel-rich.md": "17c8f7506469f66bca4e27ef78c19f0bcbf250f88fe840e3043816b7041c4fc5",
+        "palettes/monochrome.md": "fe8586f6d70707098859063bdef34d68084f02cf7d5aaa436d4c9915a7ae3748",
+        "palettes/nature-earth.md": "9710549b17487787fef3c7cb459cfd6e4ac28c1593bf471fcf55a3b4e546beed",
+        "palettes/neon-electric.md": "35225bf8d2cd37223e88e0bc59b0a96bc8adeda7225389b3df97b675cfd33dfb",
+        "palettes/pastel-soft.md": "ed4e25bb5f4953c002e55a53320249621437e03b5a11d43e3c1bd32c869b6d95",
+        "palettes/warm-editorial.md": "c467ee3cc0bbf4b2bedccc8106e18293b8a06dbac8f092b10300492da0e0559a",
+        "patterns.md": "9a31458068668a168ee3f4180e06fb2d5768afe1f84b8878f5c56c72e4ab7253",
+        "references/audio-reactive.md": "f0d83c24fa40d42a74f972ccf3b5254d7706cb063d16b8b41f87dc668a418f49",
+        "references/captions.md": "9e35e0d8618e392906a0c542571af9f070350a17007c8449c69ff31384f3b195",
+        "references/css-patterns.md": "39c4af128cdd3ed9d1be652a88c3e4d01cb0daf744dfde3db7197014cd1a38d8",
+        "references/dynamic-techniques.md": "f48f666acb270daf2ac57fede5efc96ff3f168fa4f41db611de0310452e6d7e3",
+        "references/motion-principles.md": "68f4ba410addc4c07347025ed688029d69cf71c37cc2c5da4788600ccd5d756c",
+        "references/transcript-guide.md": "e52bf99b88d5d75cb715376edc67dc86e824d54ede65815b1aa6f7582a1b166c",
+        "references/transitions.md": "302fab350697e210a763ba7e3b2acbde9aadac37bd49cb9814a12e60983294ce",
+        "references/transitions/catalog.md": "557b5b30be7b68f95d8481209b1a2f0a0e1df23f65de9b08f86697d0e6159a54",
+        "references/transitions/css-3d.md": "e1c3888dd0a2d4b36d25200c1e5ef9038649ae63953865e4b2c4c40fb028d7dd",
+        "references/transitions/css-blur.md": "fd3eef889a517e1dd985ca816f36f1abfb43420a4b664d4fcc453554cdf561f9",
+        "references/transitions/css-cover.md": "ba4e5926791c9e6a0a069e20afc91324acb018903f43b4b3f2866d9654f5b7eb",
+        "references/transitions/css-destruction.md": "7cce7bbd9ebc64176c9ff4fe40ec97273c9c171524d89f853c0651e713949361",
+        "references/transitions/css-dissolve.md": "47c11ca0a715675c2788aa4a162a652b5dc5f1773b058ea93e9907af56a4eb7c",
+        "references/transitions/css-distortion.md": "7140650692926959bd5459ca5c478a9b4f137cc76fb92b9138e3b0d353677c06",
+        "references/transitions/css-grid.md": "c62b17058aa7ba42d34df29436b6b4233e47ff2b72f2c7ce0963c75bdec45144",
+        "references/transitions/css-light.md": "53f0422d3f6dd2584a30501f84e4f09c9b515f605d51ed264a2061567dda15db",
+        "references/transitions/css-mechanical.md": "4fed48fa659a4b215a996beeea619d244e6c893700178b1f969c17f2ee0a8612",
+        "references/transitions/css-other.md": "2156e4fcc3b42cba9e0d9e268944269057fb48ff15fc1983e3ff9386fa2a8cf8",
+        "references/transitions/css-push.md": "d526a9612483472de4d865ae27061c98842a5155973dd0cec37fac4998dc1b97",
+        "references/transitions/css-radial.md": "5d8f20de439e3f2c8d45df11c8acbe31dc1b9342e2d54bbe66b451cf81ca0a1b",
+        "references/transitions/css-scale.md": "3c0cb33d6c844a7265379225f3241d8964afcc908ee757a1ebfb1700a5320ea7",
+        "references/tts.md": "bb593a862f5599eca6b36ac22b0b76f66fb1fff251e5c5b1865e341681cfcd8a",
+        "references/typography.md": "d0ef1c5666a5b7a5f2af0c5701d17e63017eafc07499830c6616ccdcb21befc8",
+        "scripts/animation-map.mjs": "6840bf5c08b8b1eab234dec3e19fe6988abdb53d2ad98560f8da05f4c6cca74f",
+        "scripts/contrast-report.mjs": "84c9cdec6242845c625af041d8fe94d48fdde89b77ea32ec241af99deda03ad1",
+        "visual-styles.md": "d173663b4342d830e46c5cc14a1ffafe6dbc6daca0702b0a451db3ce914693cc"
+      }
+    },
+    {
+      "id": "hyperframes-cli",
+      "name": "hyperframes-cli",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "8e33a5983e48473851603e1a32f7f35361971d2886f7783f63b7f3f609287ad9",
+      "files": {
+        "SKILL.md": "11adac60aaf1c8fa38e3d14239ac2c88fd0148ca048c5c4e24e75d8f577afa6d",
+        "hf-render.py": "59d4e6773d54183c3afaf8fa963669c67078b708a3fdf9ac743585b84f763890",
+        "references/website-to-video/step-1-capture.md": "4a6ce84e54c875460d217c384400a5ee5d100ff9e8029101f24375cb6ef140d5",
+        "references/website-to-video/step-2-design.md": "94a6a207ddf99583d357f01559ac7337a7199d05bf63aa7373aaaea3f6170ab1",
+        "references/website-to-video/step-3-script.md": "55cb26d748c68d7136de98d4ca1db74205908a134200f5f061f87afbde6c4496",
+        "references/website-to-video/step-4-storyboard.md": "415a9552cc17bdae408e9862ab226d49b71cb4402ab90abc5f71c8526d60061d",
+        "references/website-to-video/step-5-vo.md": "a04d32c4368d6d83e0fa7422bd365bfb15a874980772dde98c0e2ef838e48efb",
+        "references/website-to-video/step-6-build.md": "8bc833c3f002e1b74aaed8bd161e108fa0c68653b5ef51ad0748735d75e9a4a4",
+        "references/website-to-video/step-7-validate.md": "7e997f888b329722794aaceb0ce9278c654f4f1c239fa6ffeb611cf06aa7f9fb",
+        "references/website-to-video/techniques.md": "7bd2ace20c485e4a8108bc534c517df5cb9aad3dfc536fa850fdf7613548a7f2",
+        "scripts/check-env.py": "340017084166c1c1901e23094007379cc1e3ec349212d972ec2cbc4242645e9c",
+        "scripts/install-skill.py": "65ff9783952a78916368e6cdf7615dcb81b8485ed1ec60dec3c2d6911fbe8dc0"
+      }
+    },
+    {
+      "id": "korea-stock",
+      "name": "korea-stock",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "7a36282109ee354f9b481ea1a0023be8e717ba1b89568af34b361e593a972df2",
+      "files": {
+        "SKILL.md": "9342663244640363627b1e8e24807ffef395389bfc7a0fc737bbb5bb97b14bf8"
+      }
+    },
+    {
+      "id": "maimai-hub",
+      "name": "maimai-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "84042dc65cb60e92cb80388be93733f65801b7655ebc1cd9594c48aaf209814c",
+      "files": {
+        "SKILL.md": "21a0cbc80337429d94bed418c3f0789cade87a37cad598e65b5a033a57fc30f6",
+        "scripts/maimai.py": "64e91350179662bd20e28492aca4abd40974894a2fe08cfaca70f7fc16e7c28d"
+      }
+    },
+    {
+      "id": "memos-api",
+      "name": "memos-api",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "a995805b1592c4109f52d2e2834e8cb8f6595f05865e9e09440cb23b89db9f37",
+      "files": {
+        "SKILL.md": "6ea58abae4b807681b1884219c60e3b32dff53a693eb4a071970f3ffa37c8df2",
+        "references/memos-api-reference.md": "cfb1461aa9e89c58f8c07b5478e3744ee66183ce690881fb8ced7bf52de2d5eb"
+      }
+    },
+    {
+      "id": "nano-banana",
+      "name": "nano-banana",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "8fdc0e8cf748261bdfcb68621fd6fc8bd4df879eaa27b0871ff60bd4b28b908f",
+      "files": {
+        "SKILL.md": "5ef6fe6c68848fb091ad10cc30ec63f58eb39b4cee7124478251b71504d44d82",
+        "scripts/batch.py": "26bbe676a273336b94719634c7bac131230b680208356ff6759203244f879faa",
+        "scripts/edit.py": "34cf047acbcf55c68358b9840b6f2ebb37cd4df6aeeb9adebf48d10af68e0c2e",
+        "scripts/gen.py": "f1f5a2cb0070bf0d6b05d576d18ae79d5c06053dd92b46535dfb1510a6fad8da"
+      }
+    },
+    {
+      "id": "notion-hub",
+      "name": "notion-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "d43420f6ae247036679ae1f2bd92e0de2c7426b4fff53d03ac79387ac4acd23c",
+      "files": {
+        "SKILL.md": "e0486c27d0d3b23691aa8e6c38d1c504ccd4bd131e30fd68081a569cc58b878c",
+        "scripts/notion_hub.py": "42cee3351a15f56d1965d9a6587ee84725f1cbf3f817b3512336e79c728e3c2c"
+      }
+    },
+    {
+      "id": "openstreetmap-marker",
+      "name": "openstreetmap-marker",
+      "version": "1.1.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "1d7931d72b213ba7b2045ab63c94080c7310d641deaf92ed78ab5631ec258134",
+      "files": {
+        "SKILL.md": "0ed7c28be1c0bee423b9374fded54f7e910e2b5a2579cecc04dd6a57572b446c",
+        "assets/template.html": "87e0fb00511c6f274047eeb0368fb09d46051ae71674622b7a3cab3e991e99bd",
+        "scripts/build_map.py": "b51515f963bfbb25577e5f95b30b6785797d37777e8a753ff7e99d54eed0df63",
+        "scripts/gcj_convert.py": "0cb7af8134a8fc7092f74de7770b772e2aa4a0d4f12f5016aa49769858120495"
+      }
+    },
+    {
+      "id": "pdf-converter",
+      "name": "pdf-converter",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "ef4dc01754bb9032d50110f1238025e9ee7e669b8d27bcc78cffb052a464c5e5",
+      "files": {
+        ".gitignore": "9f88eed1b7eb9204e6666f8c54e2b97c4342b1de6758cfc02298c97da6642d72",
+        "SKILL.md": "2ef1f7baee69a906538514ac3cc2d0567d8b2766134c8bd52008ae812ff3e9ff",
+        "assets/template.typ": "a584a0ca334ec8c24bf7c46e9e2dbe88fa96e51ae4406b4fbbdf7bc6f885b537",
+        "evals/evals.json": "2ffc451152da3f8cb8ffa019c639e187abed905b1deae7b1c0d3658fbb7a6728",
+        "evals/pdf-format-test.md": "21ace417cb2e04fd169a4bc6e3794dd9531345351b570d1b195e0db1ec51f349",
+        "evals/pdf-format-test.pdf": "25cdb1d711549749a750df17f80927369eb607e0d8f30d57ca2b4e0b84912070",
+        "scripts/to_pdf.py": "79ba41efbc12d41428658ed1096393aaae44229b074df3de64e76a6a921052a6"
+      }
+    },
+    {
+      "id": "production-agent-public",
+      "name": "production-agent-public",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "303e483ba0bc629e9fe6efed7a4df0a9d7deb6fc9bd45ca380b558f81e5a3b45",
+      "files": {
+        "SKILL.md": "ff25ac49d28c2f20df7ec02513d8412f5d2f3c90896f1d9f518e1f4334b47969",
+        "evals/evals.json": "da74b1d9018f134936383bd884d8662f704164fa27b3e46bb5eba7f7d73e68c0",
+        "references/Sample Output.md": "6211daaf9d16d3a1f9d7bd1e5107606ffb3d14de7e4628a6755b743facfbefa7"
+      }
+    },
+    {
+      "id": "qbt-hub",
+      "name": "qbt-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "a151603dbd705e3edf08abbefb5cc80ba968ab9d9e3bb859b239ca4b8b8ae5a2",
+      "files": {
+        "SKILL.md": "bc59594d436c923f95037263895e3b3b365c173b2b9701806cb10532b4f67b16",
+        "scripts/qbt.py": "be0d74f29c74d989e7757af4256243b28b051b760a08c9779a22bec1f91dbc0f"
+      }
+    },
+    {
+      "id": "quark-hub",
+      "name": "quark-hub",
+      "version": "1.4.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "3445350efacdda0dd0e39ebb4709516fe8790348866147576f8fff1eeafb8924",
+      "files": {
+        ".gitignore": "c231ba570dc6d4f7bbf81dbac6197fcdb1b986b3798118a700bdf505755d03be",
+        "SKILL.md": "caeb04f5d0bf951989ce7a910b47441504b76fa17988985fcd985bf95ec53710",
+        "quark_hub.py": "0336b045d96a656c32486f936a2b89e3d8cee412cdd03a9b17f2bd6ddf452fb9",
+        "scripts/quark_share_ls.py": "de10397cf4772e0f71772678a26a156d07bf43a25d4ab96a526e6e9744162d3d",
+        "scripts/refresh_cookie.sh": "09da3bf3d4580ccadd96fd527f14430eb4a2aa53111314fbcfee50850aec7777"
+      }
+    },
+    {
+      "id": "reverse-dcf",
+      "name": "reverse-dcf",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "3a064d81401256bef5e2dc1eac11496fa7c419048a30bee1e6e42afa1da1cc9f",
+      "files": {
+        "SKILL.md": "b22b7a8e6402f8a6edad33e3ce0faae9d55e3c44ff24f3e024747c13aafb18b3"
+      }
+    },
+    {
+      "id": "self-improving-agent",
+      "name": "self-improving-agent",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "e609555606cc8e3145e08724d8bb4516e85da9380bcdfca62405675ff1482b91",
+      "files": {
+        "SKILL.md": "25ff48212c450f6748536855800ed9b8da3b7d7de4d652b0bac35665823e4e80",
+        "data/ERRORS.md": "8f64d655be2315181373032ac4e626b7f9e5bbf475c71813f521f3c9e2bcffd0",
+        "data/FEATURE_REQUESTS.md": "6d2f0b0d310e8a5b6383dd9d9655cd52efb218a9420cdfe91d73655f9d2f9e19",
+        "data/LEARNINGS.md": "9bd5d6c6679ce1bdd17c539dd8e78211fdcbd532438a92bf7fdf830efd836473",
+        "data/public/ERRORS.md": "fb8b19309fd60bde2cd51d7a7c323d92f0aaccb68eec790c2093f7c36733863e",
+        "data/public/FEATURE_REQUESTS.md": "b1def71ea64a44dcfc110895097c8e2cbb877d7ce39f87f284c9d3a9f6ae807d",
+        "data/public/LEARNINGS.md": "12e53b9a8d76fcb18c13841215e299cec94430e6b0eae87cf4dae5c87cd8b01a",
+        "scripts/minis_auto_log.sh": "680aed073ac1abc73f98fc2907c3e3ae3123d5c21e5314686e0ffbbf16528439"
+      }
+    },
+    {
+      "id": "shortcut-share-file",
+      "name": "shortcut-share-file",
+      "version": "2.1.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "55147b6ab7a8d4d099e4798212daba92af49fd1818458d0845b6011331701203",
+      "files": {
+        "SKILL.md": "e936999f7b24bd99a754521d28883e9269a13133a4ab0dbfc61b888e08ff9ff4",
+        "references/Help Documentation.md": "d2170c4e22258a3ac334b565bbd6483c3719416896f4e6c4a2ad020ec4d5d7ef"
+      }
+    },
+    {
+      "id": "spotify-hub",
+      "name": "spotify-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "8fe04282a383e3c46c2a6768c53af38b3eac4432053e4c10067546591931f736",
+      "files": {
+        "SKILL.md": "bb3130553ae9aaddae182b083e11957834472e2d67dcae1b06c7bb0cec719701",
+        "scripts/spotify.py": "03d885bab0a31577fc84be8218c855c76bab3a5a62023e12d257c79d76e45761",
+        "scripts/spotify_auth.py": "94721236d0fcb314595acc44f04110d5bfd6d72795a39943b587518ed4b7238b"
+      }
+    },
+    {
+      "id": "stock-fund-flow",
+      "name": "stock-fund-flow",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "0dee3943796fe6cb8fb298f430341491134f5160fad96db5606ac6ab99fa2aac",
+      "files": {
+        "SKILL.md": "064413dd1bf96fa441d76200f1c8f73f540ac081cbb10fa13e269d80c807d203"
+      }
+    },
+    {
+      "id": "stock-price",
+      "name": "stock-price",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "afda0feddc21b48d82f4017f5fe4700eab54a0dc1a2ca937dce37c87d7411045",
+      "files": {
+        "SKILL.md": "78a61a684549ab41c0e938e07216d8ecec2a44f13658d0afc0f4871f4fb73c27"
+      }
+    },
+    {
+      "id": "tavily-search",
+      "name": "tavily-search",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "ec4de94e4594ab4587a0f5c4b87eb1c8a86eea23aaa5d79750d710e43d238ec3",
+      "files": {
+        "SKILL.md": "ec6e86ae217ccb8fbfa6c90d520865714e089483cef274de28e869f27014741e",
+        "evals/evals.json": "480683cf089b28ccc83c011f7dbe1023b4e9358565630eb2cfaad50fc397e027",
+        "scripts/search.py": "793fd32e073869a51c0f9a7853e5515f603430cd51b1a977699d4a0667a2fd13"
+      }
+    },
+    {
+      "id": "tg-hub",
+      "name": "tg-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "dab22fe9e3162ec34e0bec5e44ad0e42ed7f442b65d856d1a2d25b9a7699ca29",
+      "files": {
+        "SKILL.md": "72f3045a3fb7ec8dc473e1a8ec3b8b2cd0fa342d4afcc2ca0c1bcb2ce8a5d119",
+        "pyproject.toml": "7939c547dcbfcc60c4502dab42818a533be1ab8e0d854daab931b5b81b01b3a1",
+        "scripts/__init__.py": "a680f3f90edf6f987d74f5dbf055f465360ea335a8fcfc259917e1f5ab440f83",
+        "scripts/client.py": "e094e07eb8efd3a364226fd1ef1639721c043ad4d5e6c207baa601fd9238c354",
+        "scripts/config.py": "e42f6eb09ffa91d14771a014b60114df32a2f82a178e0f62fb5b8777e29db120",
+        "scripts/db.py": "feb57a9bb451f8162afd04f71b9d37bdb557788a2c7ef32702cbd3958a3a6b7c",
+        "scripts/exceptions.py": "8e0d3fe6b13753857785144de2f72474779188a4fbb6eb439b70e930522f7828",
+        "uv.lock": "f9df8877d7e40d10eeae5d71d6b347acf5867cc7fd1aca8a66f53997eac27160"
+      }
+    },
+    {
+      "id": "todoocard",
+      "name": "todoocard",
+      "version": "1.2.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "02ba64133031576009ec1356b8c1aaf7a73dfcb3892c87bebc29ae19567659c0",
+      "files": {
+        "SKILL.md": "5358b37c14665c4e9e87e1ab0fd43fa5250aee8572874b011dc393f4fd4846fd",
+        "config.example.json": "b10bb40dfde0021c88d835860aaf88bb47a6cee9628bdbbcc46e126fdb5dded0",
+        "evals/evals.json": "7fad83869d6978b0e6256f845c2cb0c7c9a89ded4fce3bfd6a50f87397946bc0",
+        "references/protocol.md": "fe5e367541038725cf7b371fe8b12d7f4ff490ac47705491f7f4dec11a52b0d9",
+        "scripts/build_native_sender.sh": "82461a47b164f122ab4d0a687aacdb53e6c4a9966d82efadf40c4113016dac60",
+        "scripts/fast_send.py": "d20e02ac636258f37e4b4b1604820472c37a3327f2872dcc6742346d6e66fe19",
+        "scripts/image_to_payload.py": "28d015b5c2bad77be233113f5b961392e1da2e9efb55e31c9822946d5a033a5f",
+        "scripts/native_sender.swift": "317506ac14efa7ae5ca00eae7299c72a3c172226544f7a4772dcf982b8f7103a",
+        "scripts/safe_send.py": "03b95e57d6f373f31671bf9363e8b9dbbe1fa311cab811898b7f56d367892816",
+        "today-eats/SKILL.md": "a3eb9f1aae155a851ce01d640ac40b5a3181aa77f36565ba49fc20a4582eb1ca",
+        "today-eats/evals/evals.json": "00d678e1d1e4943c89e60026244c8346f985adaf3976860d9b2a22cbeea87974",
+        "today-eats/scripts/cli.py": "20623576527b8fa72aa37d4b1d31ee1b00aff84363de8e3fd2bdcb1a05637501",
+        "today-eats/scripts/meal_template.py": "7d492ca3e68c2d97cad868b075ac8d633c3e5ab4eba989c5ee8348039242a7d4"
+      }
+    },
+    {
+      "id": "twitter-downloader",
+      "name": "twitter-downloader",
+      "version": "2.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "05124295deb20f685604532d2f0dd0840947019b101401b84447dc43bd52e0ef",
+      "files": {
+        "SKILL.md": "422d03177b556a6533a482f584c9041af68e9d22c7a1f84cf83a681870e7368b",
+        "scripts/summarize_tweet.py": "7b085a0f5e1703f115e33c0561cc10a1c6bd98ab2fa6d63ff53189abc5c78c41",
+        "scripts/twitter_downloader.sh": "617b3c17bf39927afc2ce4a9cfe74e0102ea500a7d098260c631bf4a9ae3ea1f"
+      }
+    },
+    {
+      "id": "twitter-x-hub",
+      "name": "twitter-x-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "3b304f05293c40042d360108838ec41d79f081649b5f87732077b4b02d09c9ac",
+      "files": {
+        "SKILL.md": "201383a1c7c5fe8986cdbfa1ab83012b358f7bd70b478f85d142d0f2a8de6d62",
+        "pyproject.toml": "ab3eef1881855a146821eaf90a8706a0f8a760a8b100bf66892b51b3426d7fff",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/cli.py": "08f7e1ba0bb4ba97930f73f96dfb1be2c2a1a755df31349d3d5288605f232f94",
+        "scripts/client.py": "e8f975eaa7c682316f8ef3fc128cac5332e6fbb820c9892237ec147e2c45cc06",
+        "scripts/models.py": "8098bec00f2c6b41b0abc307b1c02ded17724381fd6ee70274ea61c79c15b26c",
+        "scripts/parser.py": "830c42275f49848287ae2d17195631524c26ddead5707ff6314567bfe7dbe810",
+        "uv.lock": "5ec99e0463f1b83a4e332dff389462a59e1a33873cbf9f3628a744f1a512813a"
+      }
+    },
+    {
+      "id": "us-stock",
+      "name": "us-stock",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "4938bdb25818a6e85b90f6bcb5f3445e4065cb1688ca14f09a37731f859874f6",
+      "files": {
+        "SKILL.md": "f2cffdfe540964e7bcfc0121d1e0f919705ebeb203257913b62268db8d4a473e"
+      }
+    },
+    {
+      "id": "web-content-extractor",
+      "name": "web-content-extractor",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "eaa905766062a48045b92243475887ca686f87c89d5fd5940d1896f368f91cba",
+      "files": {
+        "SKILL.md": "ba2e261e46a862012721f2ce3fb90a1fe003a310f05c0e9ebe37fc13b6c85ce9"
+      }
+    },
+    {
+      "id": "web-search",
+      "name": "web-search",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "c198cadeb2c407083ce564488177af2dd3c4b603741333150386190073112074",
+      "files": {
+        "SKILL.md": "5876d61f8b5aa012785620690178769e0c1b79d5e4b7337f769b56564804de15",
+        "evals/evals.json": "0a9b7dd2cb2632852ddb7811847e5b530ea2259120fe8562195921bf23f41b0e",
+        "scripts/browser_search.py": "a9060f9a0b4c7cbf57e2bcb27f53b28213adfcfe9a07b0934bfa9c0c4e8555f7"
+      }
+    },
+    {
+      "id": "weibo-hub",
+      "name": "weibo-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "443772e0d3402f187617d5c6168398717cf329b511a58554d45b6e03ddfe1fcf",
+      "files": {
+        "SKILL.md": "f92fa9b6a3ec4652bc6b27152b823eaa3a6914a3f7105f7cb244994427b7716f",
+        "pyproject.toml": "8a4eefb747e64a7ef091f48c326339d9adc8eb2014d99d854f2edf25817b3ed5",
+        "scripts/__init__.py": "dd4d92de77ea0dff01831c18496d9bf653f3906a5e6f4743256c61616d3766e0",
+        "scripts/auth.py": "0ef0db17383291f0b44f7411e76a0b09fd713ac1ef394620fa165f9a070fb0b3",
+        "scripts/client.py": "13afddbc98a07d1011ca67135d77701a3bfd36d6f3d5260c1b19383a9f124f1f",
+        "scripts/constants.py": "c58fdc346def7635ed4b2f0c6bb9e575fcae1c56eb4f4c78b67888c5633b25bf",
+        "scripts/exceptions.py": "9da6dd6bc25ca61a2a35e55dae95eaafa89b9bb60ac48e193d091e3323c3aef0",
+        "uv.lock": "bc88d20f451f29ec8a6753a55881c187503bbbbb34015c991688cda06396802c"
+      }
+    },
+    {
+      "id": "whenpeak",
+      "name": "whenpeak",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "ea1e870889599629c13d351c7de50322b8df7007f5ac68c7e4ec8fa38e6b6355",
+      "files": {
+        "SKILL.md": "5846c4c4231d0b18a69c981e4e803f063f8ad80e8c24037806927f346ed7f019",
+        "evals/evals.json": "ca1408f881b2c7f4a4100569d2c94b96d1beb60dbce8cabddfe6fe1920af245c",
+        "references/daily_plan.md": "200b1e0ec2fcaca7235ec28914abd6ce0732b778a03f1e1a89ae649cf14080d9",
+        "references/example_single_day.md": "9cd8093898a76d684eec8570b03a388322285969c185aef01f7061dee5b0ae5e",
+        "references/example_week.md": "7a5e3bb30ca92163fe397d4c8f5b21dff6adf211f3f299937711411adaa53711",
+        "references/sample_response.json": "f3875cd9b3e46356aa38f512d65fb29713818bf09e42b5a354d1365c578e6887",
+        "scripts/whenpeak_chart.py": "d1de0cf2580c09a9cc87f8236e91d13ddde0f18241d6858729bcb61b8820ffca",
+        "scripts/whenpeak_predict.py": "2da376b59a33dc0926963f187639ea8fcec951a0ae68c7e3dbefefd38479fe8c"
+      }
+    },
+    {
+      "id": "xianyu-hub",
+      "name": "xianyu-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "521ba04da679fa52451af9b147887133fbd8e02d447b057d2b4c0b4df3d8a69e",
+      "files": {
+        "SKILL.md": "9e98cc993e11f1d4f309b662cfff45d6f1bd3e518e6afcc430b30f7639fda48e",
+        "scripts/alt_keywords.sh": "6e3937f5cfc94821d07d475e00e6dea400adf6bef3e98649af35f44681d18650",
+        "scripts/detail.sh": "de903051e5f2b2151e989d659431c927ae2ecf5c35d4db3717d19e90fee0e80f",
+        "scripts/ensure_tab.sh": "ab938dd8ef4bb1f403d3714db5bd154620cc1985a58bf465c7c952fde7012cd5",
+        "scripts/favorites.sh": "4e21d2058e8349784170f5404aebf9dae6ac575f62160b2bb9d4ca1fc0747b6b",
+        "scripts/my_items.sh": "ca8ee21f00c638d97927b29147659722ece5f456fa12e92ede1dcc2e422a4d04",
+        "scripts/orders.sh": "482dff32070dd2fc6761ef4841b7b2079b27ff474a72f9ab22d7f704ab8fd21a",
+        "scripts/search.sh": "eee4cdb468e496d3251b9fa79e05a00f673de6167ae96b7547ae06a7970b51e6",
+        "scripts/smart_search.sh": "92c460226bb381c95304414ce4b9cbb5130a5ad2803e78a62b818245ea65e274"
+      }
+    },
+    {
+      "id": "xiaohongshu-hub",
+      "name": "xiaohongshu-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "595f8014cda1aca36d14504114204ebb7aa5e04e861a733723986b727445c17e",
+      "files": {
+        "SKILL.md": "2f4acf7b6f4838e5e476a0b56b3acbffe29228652b8a0662b64aedf905079355",
+        "pyproject.toml": "cdb41f0f73721a733626e364d666347c43f05737c065b6cf99556f70529485d9",
+        "scripts/__init__.py": "1cd6934e8d3c36952175ae5f50dde9cd932ca275007b544a6cce80f181a979e2",
+        "scripts/client.py": "79b3fe8b5f7080d25c353fcd696adbfa2a7fa8006d8132b0c0a2dc0265a5a55e",
+        "scripts/constants.py": "a3174d659d814b98b2ae9056398ca3baacaad50babccc103073d6d6329653a13",
+        "scripts/creator_signing.py": "db56c1b0239aa3e4a1f92f03f3cf8959ffd08e6debca63883071d91baaacb00e",
+        "scripts/exceptions.py": "5c8e95e899d728802d4aa93603f998035606c04fd94d871a7f5176d45d92cffc",
+        "scripts/signing.py": "2a60cedd041ec3f13966bc4bc9933d2fa0b806019373224ebdc7bd8ee4172e66"
+      }
+    },
+    {
+      "id": "youtube-downloader",
+      "name": "youtube-downloader",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "52ea435af0d5c521c9ff19c736601a0c82ca245274ecd4976507c21979e68526",
+      "files": {
+        "SKILL.md": "b8045723767b181a223fb3d5b72248a88502a9b76916977bc67abcb43fef09d0",
+        "scripts/yt-config.sh": "cfd345ade35980f569b471288c858f90df780a2773baa633550acb6b3d69c568",
+        "scripts/yt-download.sh": "3cc4271209506b2b376e0217c9aa386265ccfe0a6680a3d8be7b6cf0461039e9"
+      }
+    },
+    {
+      "id": "ytmusic-hub",
+      "name": "ytmusic-hub",
+      "version": "1.0.0",
+      "defaultEnabled": true,
+      "disabledReason": null,
+      "contentHash": "5623b4bc2d854aa7c0d822623489a58abde41c1fb325c374202ffd57fbfd7df9",
+      "files": {
+        "SKILL.md": "e5a7590c4cddab4f50fb16433e2efbbcbbb86b3dc16897b1cb45a51d484c8b60",
+        "evals/evals.json": "d69c96d2649e03b5994166d58a4ffe68833ee42e27474a8c9bcc107f3acef8fe",
+        "scripts/export_playlist.py": "9bdaadad5e8c53b93131303d5429c155c5d631894f5cf089d9d8476ec8a263c9",
+        "scripts/list_playlists.py": "07801442d0b00be5bcc0b0f254b7331c3b781a21a3565f63e50f181b162789fa",
+        "scripts/recommend_from_likes.py": "247b09f858ec61e8fdfd00abd01cc3de4d7054450b7900d871abd0e385c617d5",
+        "scripts/recommend_from_seed_jay.py": "ea09d97adf846275e7c39b20575a4680f6c7ae101ae7b91d3ddd5e5db795246e",
+        "scripts/recommend_from_seed_jay_v2.py": "149ef9ee72b071d9a8f28662facd064325002e43c5078f8bbb00b6622f298725",
+        "scripts/search_and_add.py": "e52d35058df21a75f9dc64cfabd9a286e93ec935d96bebb65fc928f5063946a1",
+        "scripts/setup_auth.py": "555d9e056d4846853e1715384c85dde994a4198eecdd04600134580d1a699e3e",
+        "scripts/test_auth.py": "970d7516ce5752bcd833f7ad46f7dc90cb677aa2728b4b5cdd0af03dce5ce178",
+        "scripts/ytmusic_client.py": "acaaa00167ba318628e1c1adc1e232e88f7b3d857c51ab08dc5ea88a7e9bbdb2"
+      }
+    }
+  ]
+}

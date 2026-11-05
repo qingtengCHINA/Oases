@@ -1,0 +1,13 @@
+// OasesChat Debug configuration
+// iOS 直连上游 api.oases.dev/v1（与 Web 的 Vercel proxy 上游一致），Bearer Key 由 .env 注入。
+// xcconfig 中 `//` 是注释，URL 里的 `//` 必须 escape 为 `/$()/`
+
+OASES_API_BASE_URL = https:/$()/api.oases.dev/v1
+OASES_REVE_API_BASE_URL = https:/$()/oaseschat.com/api/reve/v1
+OASES_PROJECT_API_BASE_URL = https:/$()/oaseschat.com/api/project
+
+// 调试日志开关
+INFOPLIST_KEY_OASESVerboseLogging = YES
+
+// Optional native frameworks (FFmpeg, …) — auto-generated.
+#include "OptionalFrameworks.generated.xcconfig"

@@ -1,0 +1,3 @@
+oases-rootfs-overlay-version=9
+profile=/etc/profile.d/oases-ogent.sh
+workspace=/root/.ogent

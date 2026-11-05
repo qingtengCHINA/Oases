@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "90FEA313-439C-4A96-A347-8E0D42E1E116",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RealTimeCutVADLibrary.xcodeproj",
+        "identifier" : "80B0BF872D5085970088BCF2",
+        "name" : "RealTimeCutVADLibraryTests"
+      }
+    }
+  ],
+  "version" : 1
+}

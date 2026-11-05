@@ -1,0 +1,72 @@
+# German words spelled exactly like the English source (reviewed 2026-09-30).
+Anthropic（Claude）
+Google（Gemini）
+xAI（Grok）
+iFlytek (Xunfei)
+Beta
+Browser
+Browser: %@
+Browser: %@ %@
+Chat
+China
+Client Secret (optional)
+Code
+Cookies
+Debug
+Design
+Desktop
+Domains
+Downloads
+Engineering
+FAQ
+Feedback
+Format
+Global
+Header
+Info
+Keep-Alive
+Laptop
+Links
+Live
+Mobile Safari
+Multimodal
+NAME
+Name
+Native Offloads
+OAuth (Client ID + Secret)
+Plan
+Player
+Premium
+Prompt
+SHA-256 (optional)
+Skill
+Skill · v%@
+Skills
+Smart Home
+Status
+Support
+System
+Tab
+Tab %lld
+Terminal
+Test
+Text
+Text · Oases Fast
+Timer
+Token
+Transport
+Upstream
+Version
+Version %@
+Viewport: %lld×%lld
+Backup: %@
+Xiaomi (MiMo)
+Zhipu AI (GLM)
+Moonshot AI (Kimi)
+Ant Group (Ling)
+Anthropic (Claude)
+Google (Gemini)
+xAI (Grok)
+Browser: %1$@ %2$@
+Viewport: %1$lld×%2$lld
+Cookies: %lld

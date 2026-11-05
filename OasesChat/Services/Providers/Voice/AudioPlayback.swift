@@ -1,0 +1,234 @@
+//
+//  AudioPlayback.swift
+//  OasesChat
+//
+//  Global audio player singleton + floating PiP capsule + inline audio
+//  bubble. Extracted from AIChatView.swift.
+//
+
+import AVFoundation
+import Combine
+import SwiftUI
+import UIKit
+
+private let logger = AppLogger(category: "AudioPlayback")
+
+// MARK: - Global Audio Player (Singleton)
+
+@MainActor
+class GlobalAudioPlayer: ObservableObject {
+    static let shared = GlobalAudioPlayer()
+    private init() {
+        // Observe AVAudioSession interruptions so we can log when playback
+        // is paused by an external audio source (call, Siri, another media
+        // app). The actual decision to resume lives elsewhere — this is a
+        // diagnostic hook for the silent-audio keep-alive investigation.
+        NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] note in
+            guard let typeRaw = note.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+                  let type = AVAudioSession.InterruptionType(rawValue: typeRaw) else { return }
+            let optionsRaw = note.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt ?? 0
+            let shouldResume = AVAudioSession.InterruptionOptions(rawValue: optionsRaw)
+                .contains(.shouldResume)
+            let label = type == .began ? "began" : "ended"
+            let isPlaying = self?.isPlaying ?? false
+            logger.info("[AudioPlayback] interruption: type=\(label) shouldResume=\(shouldResume) wasPlaying=\(isPlaying)")
+        }
+        // [T-ios-live-activity-audio-toggle] The Live Activity play/pause toggle
+        // is handled by VoiceOutputState (read-aloud engine), NOT here — see
+        // VoiceOutputState.registerLiveActivityToggleObserver (b0f3f884 fix).
+    }
+
+    @Published var isPlaying = false
+    @Published var currentTime: TimeInterval = 0
+    @Published var duration: TimeInterval = 0
+    @Published var rate: Float = 1.0
+    @Published var isLoaded = false
+    @Published var activeFileURL: URL?
+    @Published var fileName: String = ""
+    /// Set to true when user taps capsule to re-open the full preview.
+    @Published var showFullPreview = false
+
+    /// Capsule is shown whenever an audio file is loaded. The only way to hide
+    /// it is to call `stop()` (e.g. via the capsule's close button), which
+    /// resets `isLoaded`. The capsule view itself further hides when the full
+    /// preview sheet is open to avoid overlapping UI.
+    var isPiPActive: Bool { isLoaded }
+
+    private var player: AVAudioPlayer?
+    private var timer: Timer?
+    private var seekWorkItem: DispatchWorkItem?
+
+    /// Whether the given URL is the currently active audio file.
+    func isActive(url: URL) -> Bool {
+        activeFileURL == url
+    }
+
+    /// Load and play a URL. If already playing this URL, just ensures playback. If a different URL, stops current and loads new.
+    func play(url: URL) {
+        if activeFileURL == url {
+            // Same file — restart from beginning if finished, otherwise resume
+            if !isPlaying {
+                if duration > 0 && currentTime >= duration - 0.1 {
+                    seek(to: 0)
+                }
+                togglePlayPause()
+            }
+            return
+        }
+        // Stop any current playback
+        stopInternal()
+        // Suspend silent audio so media gets full volume
+        let preCount = BackgroundKeepAliveManager.shared.silentAudioSuspendCount
+        logger.info("[AudioPlayback] play: url=\(url.lastPathComponent) suspendSilentAudio → count will be \(preCount + 1)")
+        BackgroundKeepAliveManager.shared.suspendSilentAudioForMedia()
+        // Load new file
+        let loadURL = url
+        Task.detached(priority: .userInitiated) {
+            guard let p = try? AVAudioPlayer(contentsOf: loadURL) else {
+                await MainActor.run {
+                    BackgroundKeepAliveManager.shared.resumeSilentAudioForMedia()
+                }
+                return
+            }
+            p.prepareToPlay()
+            p.enableRate = true
+            let dur = p.duration
+            await MainActor.run { [weak self] in
+                guard let self else { return }
+                self.player = p
+                self.activeFileURL = loadURL
+                self.fileName = loadURL.deletingPathExtension().lastPathComponent
+                self.duration = dur
+                self.currentTime = 0
+                self.isLoaded = true
+                self.rate = 1.0
+                // Start playing immediately. Declaring `.mediaAttachment` preempts
+                // reply TTS (mutually exclusive) and applies the playback profile.
+                AudioSessionCoordinator.shared.begin(.mediaAttachment)
+                p.play()
+                self.isPlaying = true
+                self.startTimer()
+            }
+        }
+    }
+
+    func togglePlayPause() {
+        guard let p = player else { return }
+        if p.isPlaying {
+            p.pause()
+            isPlaying = false
+            timer?.invalidate()
+        } else {
+            AudioSessionCoordinator.shared.begin(.mediaAttachment)
+            p.play()
+            p.rate = rate
+            isPlaying = true
+            startTimer()
+        }
+    }
+
+    func pause() {
+        guard let p = player, p.isPlaying else { return }
+        p.pause()
+        isPlaying = false
+        timer?.invalidate()
+    }
+
+    func seek(to time: TimeInterval) {
+        player?.currentTime = time
+        currentTime = time
+    }
+
+    /// Debounced seek — updates the displayed time immediately but delays the actual
+    /// AVAudioPlayer seek by 100 ms, coalescing rapid slider/drag movements.
+    func debouncedSeek(to time: TimeInterval) {
+        currentTime = time
+        seekWorkItem?.cancel()
+        let item = DispatchWorkItem { [weak self] in
+            guard let self else { return }
+            self.player?.currentTime = time
+        }
+        seekWorkItem = item
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: item)
+    }
+
+    func setRate(_ r: Float) {
+        rate = r
+        if let p = player, p.isPlaying {
+            p.rate = r
+        }
+    }
+
+    func skip(by seconds: TimeInterval) {
+        let newTime = max(0, min(currentTime + seconds, duration))
+        seek(to: newTime)
+    }
+
+    /// Deprecated: capsule visibility is now derived from `isLoaded`. Kept as a
+    /// no-op so existing callers that minimize the full preview into PiP keep
+    /// compiling — minimization now happens by simply dismissing the sheet.
+    func activatePiP() {}
+
+    /// Deprecated: capsule visibility is now derived from `isLoaded`. Use
+    /// `stop()` to fully hide the capsule.
+    func deactivatePiP() {}
+
+    /// Stop all playback and reset state. This is the only way to hide the
+    /// PiP capsule (driven by `isLoaded` flipping to false in `stopInternal`).
+    func stop() {
+        stopInternal()
+        showFullPreview = false
+    }
+
+    private func stopInternal() {
+        let wasLoaded = isLoaded
+        timer?.invalidate()
+        timer = nil
+        player?.stop()
+        player = nil
+        activeFileURL = nil
+        fileName = ""
+        isPlaying = false
+        currentTime = 0
+        duration = 0
+        isLoaded = false
+        // End the media-attachment intent — coordinator re-applies the next intent
+        // or deactivates. Note: TTS is NOT auto-resumed (per plan scenario 1).
+        AudioSessionCoordinator.shared.end(.mediaAttachment)
+        // Resume silent audio keep-alive if we had suspended it
+        if wasLoaded {
+            let preCount = BackgroundKeepAliveManager.shared.silentAudioSuspendCount
+            logger.info("[AudioPlayback] stopInternal: resumeSilentAudio → count will be \(max(0, preCount - 1))")
+            BackgroundKeepAliveManager.shared.resumeSilentAudioForMedia()
+        }
+    }
+
+    private func startTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+            guard let self, let p = self.player else { return }
+            DispatchQueue.main.async {
+                self.currentTime = p.currentTime
+                if !p.isPlaying {
+                    self.isPlaying = false
+                    self.timer?.invalidate()
+                    // Natural end → release the media-attachment intent.
+                    AudioSessionCoordinator.shared.end(.mediaAttachment)
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Floating Audio PiP Capsule
+
+// OpenMinis continues this file with `AudioPiPCapsule` and its audio player /
+// preview views. Those are built on OpenMinis' `ChatColors` design system,
+// which OasesChat doesn't have (it uses `OasesColor`), and nothing in the
+// ported background-audio path renders them — `GlobalAudioPlayer` above is
+// what `BackgroundKeepAliveManager` actually observes. Omitted rather than
+// half-translated into a different design system.

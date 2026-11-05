@@ -1,0 +1,19 @@
+Oases Chat built-in skills
+
+The skills in this directory are vendored from:
+
+  Repository: https://github.com/OpenMinis/MinisSkills
+  Commit:     7ac4068b36bbc961a4d6f0a4a06456d90e2b6f55
+
+Copyright (c) 2026 OpenMinis and contributors.
+
+Not vendored (EXCLUDED_SKILLS): codex-image, codex-on-ish.
+Modified (TEXT_OVERRIDES, exact text replacements): appstoreprice-hub/SKILL.md, xianyu-hub/SKILL.md.
+Everything else is unmodified.
+
+License: the upstream LICENSE file (copied alongside as LICENSE) is the MIT
+License. The upstream README additionally states "Apache License 2.0"; the
+LICENSE file is reproduced verbatim and both notices are preserved here.
+
+Regenerate with:
+  python3 scripts/skills/build_builtin_skills.py <MinisSkills checkout> 7ac4068b36bbc961a4d6f0a4a06456d90e2b6f55

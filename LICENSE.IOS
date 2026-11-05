@@ -1,0 +1,19 @@
+Oases Chat — App Store distribution
+
+Oases Chat for iOS is free software under the GNU General Public License,
+version 3 (see LICENSE). The terms of service of Apple's App Store may
+conflict with rights the GPL grants. The copyright holder of the Oases Chat
+code (QingTeng Studio) does not want that conflict to stop otherwise-compliant
+distribution of this app or of apps derived from it through the App Store.
+Therefore, for the code we hold the copyright to, we will not pursue any
+license violation that results solely from the conflict between the GNU GPL
+and the App Store terms of service. As long as you comply with the GPL in
+every other respect, including providing users with the complete
+corresponding source code and the text of the license, we will not object to
+distribution through the App Store.
+
+This statement covers only code whose copyright QingTeng Studio holds. Parts
+of this app come from other projects under their own terms (see NOTICE.md):
+iSH has a statement of its own to the same effect (vendor/iSH/LICENSE.IOS);
+code ported from OpenMinis is GPL-3.0 and is covered only by its own
+copyright holders' terms.

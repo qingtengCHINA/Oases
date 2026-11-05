@@ -1,0 +1,202 @@
+[
+  {
+    "name": "iSH (ARM64 fork)",
+    "license": "GPL-3.0 (+ GPL-2.0 for later contributions) with LICENSE.IOS additional terms",
+    "url": "https://github.com/OpenMinis/ish-arm64",
+    "upstream": "https://github.com/ish-app/ish",
+    "files": [
+      "iSH-LICENSE.md",
+      "iSH-LICENSE.IOS.txt",
+      "GPL-3.0.txt"
+    ],
+    "note": "Linux emulator (libish, libish_emu, libfakefs) statically linked into the app."
+  },
+  {
+    "name": "OpenMinis",
+    "license": "GPL-3.0",
+    "url": "https://github.com/OpenMinis/OpenMinis",
+    "files": [
+      "GPL-3.0.txt"
+    ],
+    "note": "Parts of the app's agent, provider, tool and interface code are ported from OpenMinis."
+  },
+  {
+    "name": "MinisSkills",
+    "license": "MIT",
+    "url": "https://github.com/OpenMinis/MinisSkills",
+    "files": [
+      "MinisSkills-LICENSE.txt"
+    ],
+    "note": "Built-in skills, bundled unmodified."
+  },
+  {
+    "name": "SwiftAnthropic",
+    "license": "MIT",
+    "url": "https://github.com/jamesrochabrun/SwiftAnthropic",
+    "files": [
+      "SwiftAnthropic-LICENSE.txt"
+    ]
+  },
+  {
+    "name": "swift-cmark (cmark-gfm)",
+    "license": "BSD-2-Clause and others",
+    "url": "https://github.com/swiftlang/swift-cmark",
+    "files": [
+      "swift-cmark-COPYING.txt"
+    ]
+  },
+  {
+    "name": "SwiftMath",
+    "license": "MIT",
+    "url": "https://github.com/mgriebling/SwiftMath",
+    "files": [
+      "SwiftMath-LICENSE.txt"
+    ]
+  },
+  {
+    "name": "RealTimeCutVADLibrary",
+    "license": "MIT",
+    "url": "https://github.com/helloooideeeeea/RealTimeCutVADLibrary",
+    "files": [
+      "RealTimeCutVADLibrary-LICENSE.txt"
+    ]
+  },
+  {
+    "name": "ThinkingOrbsKit, BorderBeamKit, BotAvatarsKit, MetalFxKit (libraries.dev)",
+    "license": "MIT",
+    "url": "https://libraries.dev",
+    "files": [
+      "libraries-dev-LICENSE.txt"
+    ]
+  },
+  {
+    "name": "cppjieba",
+    "license": "MIT",
+    "url": "https://github.com/yanyiwu/cppjieba",
+    "files": [
+      "cppjieba-LICENSE.txt"
+    ]
+  },
+  {
+    "name": "KaTeX",
+    "license": "MIT",
+    "url": "https://github.com/KaTeX/KaTeX",
+    "files": [
+      "KaTeX-LICENSE.txt"
+    ]
+  },
+  {
+    "name": "sensory-ui",
+    "license": "MIT",
+    "url": "https://github.com/SatyamVyas04/sensory-ui",
+    "files": [
+      "sensory-ui-LICENSE.txt"
+    ],
+    "note": "Interface sounds (Resources/Sounds/ui_*.caf) rendered offline from sensory-ui's Soft sound pack."
+  },
+  {
+    "name": "Cicada",
+    "license": "Apache-2.0",
+    "url": "https://github.com/wquguru/cicada",
+    "files": [
+      "Cicada-LICENSE.txt"
+    ],
+    "note": "Meeting Notes: the notes prompt, parser, text cleanup and export formats are adapted from Cicada (commit 38771f1)."
+  },
+  {
+    "name": "LobeHub Icons",
+    "license": "MIT",
+    "url": "https://github.com/lobehub/lobe-icons",
+    "files": [
+      "lobe-icons-LICENSE.txt"
+    ],
+    "note": "Provider logos on the provider pages (SVG). The marks belong to their companies and identify each service."
+  },
+  {
+    "name": "Paper Shaders",
+    "license": "Apache-2.0",
+    "url": "https://github.com/paper-design/shaders",
+    "files": [
+      "paper-shaders-NOTICE.txt",
+      "Cicada-LICENSE.txt"
+    ],
+    "note": "The liquid-metal shader is adapted from Paper Shaders 0.0.80. Powered by Paper Shaders: https://shaders.paper.design"
+  },
+  {
+    "name": "expo-backdrop",
+    "license": "MIT",
+    "url": "https://github.com/rit3zh/expo-backdrop",
+    "files": [
+      "expo-backdrop-LICENSE.txt"
+    ],
+    "note": "The progressive blur under the top bars is adapted from expo-backdrop."
+  },
+  {
+    "name": "Silero VAD",
+    "license": "MIT",
+    "url": "https://github.com/snakers4/silero-vad",
+    "files": [
+      "silero-vad-LICENSE.txt"
+    ],
+    "note": "Voice activity detection model bundled with RealTimeCutVADLibrary."
+  },
+  {
+    "name": "ONNX Runtime",
+    "license": "MIT",
+    "url": "https://github.com/microsoft/onnxruntime",
+    "files": [
+      "onnxruntime-LICENSE.txt"
+    ],
+    "note": "Inference runtime inside RealTimeCutVADLibrary."
+  },
+  {
+    "name": "WebRTC Audio Processing",
+    "license": "BSD-3-Clause",
+    "url": "https://webrtc.googlesource.com/src",
+    "files": [
+      "webrtc-LICENSE.txt"
+    ],
+    "note": "Audio processing inside RealTimeCutVADLibrary."
+  },
+  {
+    "name": "HyperFrames",
+    "license": "Apache-2.0",
+    "url": "https://github.com/heygen-com/hyperframes",
+    "files": [
+      "Cicada-LICENSE.txt"
+    ],
+    "note": "Two built-in skills (hyperframes, hyperframes-cli) are adapted from HyperFrames."
+  },
+  {
+    "name": "yt-dlp",
+    "license": "Unlicense",
+    "url": "https://github.com/yt-dlp/yt-dlp",
+    "files": [
+      "yt-dlp-UNLICENSE.txt"
+    ],
+    "note": "Included in Ogent's Linux environment."
+  },
+  {
+    "name": "uv",
+    "license": "MIT OR Apache-2.0",
+    "url": "https://github.com/astral-sh/uv",
+    "files": [
+      "uv-LICENSE-MIT.txt",
+      "Cicada-LICENSE.txt"
+    ],
+    "note": "Included in Ogent's Linux environment."
+  },
+  {
+    "name": "Alpine Linux packages (Ogent's Linux environment)",
+    "license": "Various: GPL-2.0, GPL-3.0, LGPL-2.1, MPL-2.0, MIT, BSD and others",
+    "url": "https://gitlab.alpinelinux.org/alpine/aports/-/tree/3.21-stable",
+    "upstream": "https://dl-cdn.alpinelinux.org/alpine/v3.21/",
+    "files": [
+      "GPL-2.0.txt",
+      "GPL-3.0.txt",
+      "LGPL-2.1.txt",
+      "MPL-2.0.txt"
+    ],
+    "note": "Ogent's Linux environment is an Alpine Linux 3.21 root file system: 257 packages (busybox, bash, git, ffmpeg, python and others), each a separate program run by the emulator, not linked into the app. Each package's license is recorded in /lib/apk/db/installed inside that environment. Source code: the aports build recipes at the source link, and the upstream sources they name. On request we provide the complete corresponding source for any GPL-licensed package, for at least three years from the last distribution of this app version."
+  }
+]

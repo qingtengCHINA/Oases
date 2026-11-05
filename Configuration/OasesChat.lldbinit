@@ -1,0 +1,11 @@
+# iSH guest runtime uses host signals to wake / schedule tasks.
+# If LLDB stops on these, Xcode sits forever on "Launching…" after a
+# successful device build — the process is paused under the debugger.
+#
+# Pass them through: notify (console), pass (to process), do NOT stop.
+process handle SIGUSR1 --notify true --pass true --stop false
+process handle SIGUSR2 --notify true --pass true --stop false
+process handle SIGPIPE --notify true --pass true --stop false
+process handle SIGALRM --notify true --pass true --stop false
+process handle SIGVTALRM --notify true --pass true --stop false
+process handle SIGPROF --notify true --pass true --stop false

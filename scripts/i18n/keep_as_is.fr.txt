@@ -1,0 +1,47 @@
+# French words spelled exactly like the English source (reviewed 2026-09-30).
+%1$lld / %2$lld tokens
+1 minute
+10 minutes
+15 minutes
+5 minutes
+Action
+Actions
+Avatar
+Code
+Contacts
+Conversations
+Cookies
+Description
+Design
+Europe
+Finance
+Format
+Image
+Instance
+Message
+Messages
+Multimodal
+Note
+Notes
+Notifications
+Photos
+Plan
+Premium
+Prompt
+Source
+Style
+Terminal
+Test
+Total
+Transcription
+Transport
+Type
+Ultra
+Version
+Version %@
+Volume
+[Image]
+audio
+image
+%lld min
+Conclusions

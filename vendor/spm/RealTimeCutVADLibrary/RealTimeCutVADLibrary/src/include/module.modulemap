@@ -1,0 +1,4 @@
+module RealTimeCutVADLibrary {
+    header "VADWrapper.h"
+    export *
+}

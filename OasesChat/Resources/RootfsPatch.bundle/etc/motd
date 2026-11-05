@@ -1,0 +1,3 @@
+Welcome to Ogent Alpine Linux.
+Device-local agent workspace: /root/.ogent
+Run: ogent-agent status
